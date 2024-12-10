@@ -1,88 +1,192 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
-    margin: 0;
-    padding: 10px;
+.navbar {
+    background-color: rgb(237, 123, 82);
+    padding: 16px;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 100px;
-}
-
-.profile-header {
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
+    justify-content: space-between;
     align-items: center;
 }
 
-.profile-info {
-    flex: 1;
+.logo img {
+    width: 150px;
+    height: auto;
 }
 
-.profile-info h1 {
-    margin: 0;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.profile-info p {
-    margin: 5px 0;
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
 }
 
-button {
-    padding: 10px 15px;
+.nav-links a:visited {
+    color: red;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle {
+    display: block;
+    background: none;
     border: none;
-    border-radius: 5px;
-    background-color: #0095f6;
-    color: white;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #007bb5;
+@media (max-width:768px) {
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
 }
 
-.posts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 20px;
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.posts img {
+.nav-links {
+    display: none;
+    flex-direction: column;
     width: 100%;
-    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.div-class {
+.nav-toggle:focus+.nav-links,.nav-links:hover {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+a:visited{
+    color: red;
+}
+#container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+#text {
+
+}
+
+h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 0;
+}
+ 
+#hobby {
+    width:80%;
+    margin: 100px auto;
+   
+}
+
+#hobby-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:10px;
+    
+   
+}
+.box {
+    width: 25%;
+    border: 1px solid black;
     padding: 10px;
+    border-radius: 10px;
+    background-color:whitesmoke;
+    margin: 5px;
 }
 
-@media (max-width:768px) {
-    .profile-header {
+h5 {
+    font-size: 24px; 
+    padding: 0;
+    margin: 5px;
+   
+   
+}
+
+#lutfi {
+    width: 80%;
+    margin: auto;
+    background-color:black;
+    color:white;
+}
+
+@media (max-width: 600px) {
+    #container {
+        width: 80%;
         display: flex;
-        padding: 20px;
-        border-bottom: 1px solid #eee;
+        flex-direction: column-reverse;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    #container h3 {
+        font-size: 28px;
+    }
+    #container h1 {
+        font-size: 36px;
+    }
+
+    #container img {
+        width: 500px;
+    }
+
+    #hobby-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: 10px;
+    }
+    .box {
+        width: 80%;
+        padding: 10px;
     }
 }
 
-@media (max-width:768px) {
-    .container {
-        max-width: 600px;
-        margin: auto;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-}
